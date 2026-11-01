@@ -1,0 +1,20 @@
+[Unit]
+Description=PDF upload to HP LaserJet print service (pdfprint)
+After=network-online.target cups.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=@USER@
+Group=@USER@
+WorkingDirectory=@DIR@
+EnvironmentFile=-/etc/pdfprint.conf
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 @DIR@/pdfprint.py
+Restart=on-failure
+RestartSec=3
+PrivateTmp=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

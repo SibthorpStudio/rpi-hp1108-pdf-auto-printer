@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# runtime data created by the service
+spool/
+printed/
+server.log
+
+# editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+*.swp

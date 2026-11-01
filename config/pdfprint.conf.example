@@ -1,0 +1,17 @@
+# /etc/pdfprint.conf — read by systemd (EnvironmentFile).
+# Uncomment and edit what you need, then: sudo systemctl restart pdfprint
+# Values are plain KEY=value, no shell syntax, no quotes needed.
+
+# CUPS queue name. Check with: lpstat -p
+#PDFPRINT_PRINTER=HP-LaserJet-Professional-P1108
+
+# Listen port and bind address. 0.0.0.0 = reachable from the whole LAN.
+#PDFPRINT_PORT=8080
+#PDFPRINT_BIND=0.0.0.0
+
+# Upload size limit in MB, and how long to wait for one print job (seconds).
+#PDFPRINT_MAX_MB=50
+#PDFPRINT_TIMEOUT=240
+
+# How many recent jobs stay visible in the web UI (kept in RAM only).
+#PDFPRINT_HISTORY=40
